@@ -1,10 +1,17 @@
 const form = document.querySelector("form");
 const ul = document.querySelector("ul");
+const li = document.querySelector("li");
+const styleButton = document.querySelector(".changeStyle")
+
+
+
+
 form.addEventListener("submit", e =>{
     e.preventDefault();
-    const storeText = form.text.value;
-    ul.innerHTML += `<li>${storeText}<button class="btn btn-danger btn-sm remove">x</button></li>`
+    const storeText = form.text.value.trim();
+    
     if(storeText.length){
+        ul.innerHTML += `<li>${storeText}<button class="btn btn-danger btn-sm remove">x</button> <button class="btn btn-warning btn-sm strike">-</button></li>`
         form.reset();
     }
 })
@@ -14,11 +21,17 @@ ul.addEventListener("click", e =>{
     if(e.target.classList.contains("remove")){
         e.target.parentElement.remove();
     }
+    if(e.target.classList.contains("strike")){
+
+        e.target.parentElement.classList.add("strikeOut")
+    }
 })
 
 
 
-
+styleButton.addEventListener("click", e =>{
+    ul.innerHTML.classList.remove("lin");
+})
 
 
 

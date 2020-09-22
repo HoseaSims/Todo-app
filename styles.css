@@ -9,7 +9,16 @@ li{
     margin: 20px;
     list-style: none;
     background-color: #36505a;
-    display: inline-block;   
+    display: block;
+       
+}
+
+.lin{
+    font-size: 20px;
+    margin: 20px;
+    list-style: none;
+    background-color: #36505a;
+    display: inline-block; 
 }
 
 button{
@@ -18,4 +27,8 @@ button{
 
 form{
     padding-top: 20px;
+}
+
+.strikeOut{
+    text-decoration: line-through;
 }
