@@ -23,15 +23,13 @@ ul.addEventListener("click", e =>{
     }
     if(e.target.classList.contains("strike")){
 
-        e.target.parentElement.classList.add("strikeOut")
+        e.target.parentElement.classList.toggle("strikeOut")
     }
 })
 
 
 
-styleButton.addEventListener("click", e =>{
-    ul.innerHTML.classList.remove("lin");
-})
+
 
 
 
