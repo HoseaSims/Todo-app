@@ -11,7 +11,7 @@ form.addEventListener("submit", e =>{
     const storeText = form.text.value.trim();
     
     if(storeText.length){
-        ul.innerHTML += `<li>${storeText}<button class="btn btn-danger btn-sm remove">x</button> <button class="btn btn-warning btn-sm strike">-</button></li>`
+        ul.innerHTML += `<div class="list-div"><li>${storeText}<button class="btn btn-danger btn-sm remove">x</button> <button class="btn btn-warning btn-sm strike">-</button></li></div>`
         form.reset();
     }
 })
